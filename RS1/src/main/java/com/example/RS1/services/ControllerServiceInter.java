@@ -15,7 +15,7 @@ public interface ControllerServiceInter {
     List<Persona> addPersona(Persona persona);
 
     //PUT
-    Persona updatePersona(Integer id);
+    Persona updatePersona(Integer id, Persona updatePersona);
 
     //DELETE
     Boolean delPersona(Integer id);

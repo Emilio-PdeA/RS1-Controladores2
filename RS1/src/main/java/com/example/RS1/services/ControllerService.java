@@ -22,12 +22,12 @@ public class ControllerService implements ControllerServiceInter {
     }
 
     @Override
-    public Persona updatePersona(Integer id) {
-
-        if (personaList.size()>id){
-            personaList.get(id);
+    public Persona updatePersona(Integer id, Persona updatePersona) {
+        if (personaList.size()>id) {
+            Persona pp =  personaList.get(id);
+            pp.setPersona(updatePersona);
+            return pp;
         }
-
         return null;
     }
 
@@ -50,7 +50,6 @@ public class ControllerService implements ControllerServiceInter {
     }
     @Override
     public Persona getPersona(Integer id){
-        Integer idx = 0;
         if (personaList.size()>id) {
             return personaList.get(id);
         }

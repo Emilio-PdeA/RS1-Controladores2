@@ -44,8 +44,15 @@ public class Controller {
     String delPersona(@PathVariable Integer id){
         if(controllerService.delPersona(id)){
             return "Persona eliminada!";
-        };
+        }
         return "ID no existe";
+    }
+
+    //PUT METHOD
+    @PutMapping("/{id}")
+    String upPersona(@PathVariable Integer id, @RequestBody Persona updatePersona){
+        controllerService.updatePersona(id,updatePersona);
+        return "ok";
     }
 
 
